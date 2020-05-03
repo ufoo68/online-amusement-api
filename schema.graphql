@@ -1,0 +1,24 @@
+type Amusement {
+  id: String!
+  title: String!
+  url: String!
+  summary: String
+}
+
+type Query {
+  getAquarium: [Amusement]
+  getShrime: [Amusement]
+  getOnsen: [Amusement]
+}
+
+input AmusementInput {
+  title: String!
+  url: String!
+  summary: String
+}
+
+type Mutation {
+  addAquarium(amusement: AmusementInput!): Amusement
+  addShrime(amusement: AmusementInput!): Amusement
+  addOnsen(amusement: AmusementInput!): Amusement
+}
